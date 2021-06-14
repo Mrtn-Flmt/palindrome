@@ -35,3 +35,4 @@ int my_error(int ac, int x, char *s, int positif);
 int my_perror(char *c);
 
 long my_factrec_synthesis(int nb);
+int my_squareroot_synthesis(int nb);

@@ -14,3 +14,8 @@ long my_factrec_synthesis(int nb)
     else
         return (1);
 }
+
+int my_squareroot_synthesis(int nb)
+{
+    return (0);
+}

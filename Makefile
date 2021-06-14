@@ -18,7 +18,7 @@ BSQ = 	bsq/
 PT = 	my_printf/
 
 SRC =	./$(MY)main.c								\
-		./$(MY)factoriel.c							\
+		./$(MY)requirement.c						\
 													\
 		./$(LP)$(PT)my_printf.c						\
 		./$(LP)$(PT)my_printf_char.c				\
