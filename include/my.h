@@ -37,3 +37,4 @@ int my_perror(char *c);
 long my_factrec_synthesis(int nb);
 int my_squareroot_synthesis(int nb);
 void print_info(void);
+int my_help(int ac, char **av);
