@@ -19,7 +19,8 @@ PT = 	my_printf/
 
 SRC =	./$(MY)main.c								\
 		./$(MY)requirement.c						\
-		./$(MY)print_info.c								\
+		./$(MY)print_info.c							\
+		./$(MY)struct.c								\
 													\
 		./$(LP)$(PT)my_printf.c						\
 		./$(LP)$(PT)my_printf_char.c				\

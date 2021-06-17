@@ -14,6 +14,13 @@
 #include <stdio.h>
 #include <ncurses.h>
 
+typedef struct save_s
+{
+    char *nb;
+    int it;
+    int base_n;
+} save_t;
+
 void my_putchar(char c);
 void my_put_nbr(int nb);
 void my_putstr(char *str);
@@ -38,3 +45,4 @@ long my_factrec_synthesis(int nb);
 int my_squareroot_synthesis(int nb);
 void print_info(void);
 int my_help(int ac, char **av);
+save_t *set_save(save_t *save, char **av);
