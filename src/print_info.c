@@ -6,7 +6,18 @@
 */
 
 #include "./../include/my.h"
-#include <stdio.h>
+
+int my_h(int ac, char **av)
+{
+    if (ac == 2 && (av[1][0] == '-' && av[1][1] == 'h')) {
+        print_info();
+        return (0);
+    } else if (ac == 2 && (av[1][0] == '-' || av[1][1] == 'h')) {
+        my_printf("invalid argument\n");
+        return (84);
+    }
+    return (0);
+}
 
 void print_info(void)
 {
@@ -27,9 +38,22 @@ void print_info(void)
     my_putstr("(>=0) [def: 100]\n");
 }
 
-int my_help(int ac, char **av)
+void print_n(save_t *save)
 {
-    if (ac == 2 && av[1][0] == '-' && av[1][1] == 'h')
-        print_info();
-    return (84);
+    my_put_nbr(save->nb);
+    my_putstr(" leads to ");
+    my_put_nbr(save->nb_pal);
+    my_putstr(" in ");
+    my_put_nbr(save->it);
+    my_putstr(" iteration(s) in base 10\n");
+}
+
+void print_p(int i, int pal, save_t *save)
+{
+    my_put_nbr(i);
+    my_putstr(" leads to ");
+    my_put_nbr(pal);
+    my_putstr(" in ");
+    my_put_nbr(save->it);
+    my_putstr(" iteration(s) in base 10\n");
 }
